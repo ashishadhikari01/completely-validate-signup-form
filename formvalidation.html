@@ -1,0 +1,88 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <script src="./formvalidation.js" defer></script>
+      <link rel="stylesheet" href="./formvalidation.css">
+    </head>
+    <body>
+   <div class="form-container">
+    <form name="registerForm" id="myform">
+      <div><label>Name:</label></div>
+      <div><input type="text" name="name" class="name"></div>
+      <label class="error" id="name-err"></label>
+
+      <div><label>Adress:</label></div>
+      <div><input type="text" name="address"></div>
+      <label class="error" id="address-err"></label>
+
+     <div><label>Gender:</label></div>
+      <div>
+        <label><input type="radio" value="male" name="gender" required>male</label>
+        <label><input type="radio" value="female" name="gender">female</label>
+        <label><input type="radio" value="not-to-say" name="gender">Not to say</label>
+      </div>
+      <label class="error" id="gender-err"></label>
+  
+      <div><label>Email:</label></div>
+      <div><input type="email" name="email"></div>
+      <label class="error" id="email-err"></label>
+
+      <div><label>phone:</label></div>
+      <div><input type="phone" name="phone" required></div>
+      <label class="error" id="phone-err"></label>
+
+      <div><label>DOb:</label></div>
+      <div><input type="date" name="dob"></div>
+      <label class="error" id="dob-err"></label>
+
+      <div><label>Subjects:</label></div>
+      <div>
+      <label><input type="checkbox" name="subject[]" value="social">social</label>
+
+      <label><input type="checkbox" name="subject[]" value="science">science</label>
+
+      <label><input type="checkbox" name="subject[]" value="gk">gk</label>
+      <label class="error" id="subject-err"></label>
+    </div>
+
+      <div><label>password:</label></div>
+      <div><input type="password" name="password"></div>
+    <label class="error"id="password-err"></label>
+
+    <div><label> confirm password:</label></div>
+    <div><input type="password" name="confirm-password"></div>
+    <label class="error" id="confirm-password-err"></label> 
+
+  <div>
+    <a href="formgetsubmitted.html" target="_self"><button type="button" class="submit-btn">register</button>
+<!-- <button type="button" class="submit-btn" onclick="run()">Register</button> -->
+      <label class="error" id="button-err"></label>
+  </div>
+
+  <div>
+    <button type="reset" onclick="run()">reset</button>
+    
+    <label class="errro" id="reset-err"></label>
+  </div>
+  
+    </form>
+  </div>
+
+  <script>
+
+function run(){
+  window.location.href = "formvalidation.html";
+
+
+
+
+
+
+}
+
+  </script>
+</body>
+</html>

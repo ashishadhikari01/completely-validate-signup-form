@@ -6,6 +6,18 @@
       <title>Document</title>
       <script src="./formvalidation.js" defer></script>
       <link rel="stylesheet" href="./formvalidation.css">
+      <style>
+        .error{
+    color:red;
+}
+        input{
+          border:2px solid silver;
+        }
+        .gender-wrapper,.subject-wrapper{
+          border:2px solid silver;
+          display:inline-flex;
+        }
+      </style>
     </head>
     <body>
    <div class="form-container">
@@ -18,13 +30,14 @@
       <div><input type="text" name="address"></div>
       <label class="error" id="address-err"></label>
 
+      <!-- radio -->
      <div><label>Gender:</label></div>
-      <div>
+      <div class="gender-wrapper">
         <label><input type="radio" value="male" name="gender">male</label>
         <label><input type="radio" value="female" name="gender">female</label>
         <label><input type="radio" value="not-to-say" name="gender">Not to say</label>
       </div>
-      <label class="error" id="gender-err"></label>
+      <div><label class="error" id="gender-err"></label></div>
   
       <div><label>Email:</label></div>
       <div><input type="email" name="email"></div>
@@ -33,20 +46,30 @@
       <div><label>phone:</label></div>
       <div><input type="phone" name="phone"></div>
       <label class="error" id="phone-err"></label>
-
+    
       <div><label>DOb:</label></div>
       <div><input type="date" name="dob"></div>
       <label class="error" id="dob-err"></label>
-
+   
+      <!-- checkbox -->
       <div><label>Subjects:</label></div>
-      <div>
+      <div class="subject-wrapper">
       <label><input type="checkbox" name="subject[]" value="social">social</label>
 
       <label><input type="checkbox" name="subject[]" value="science">science</label>
 
       <label><input type="checkbox" name="subject[]" value="gk">gk</label>
-      <label class="error" id="subject-err"></label>
     </div>
+      <div><label class="error" id="subject-err"></label></div>
+    
+      <!-- dropdown -->
+   <div><label>Extra Activities:</label></div>
+    <select name="extra-activites">
+      <option value="select">Select</option>
+      <option value="yes">Yes</option>
+      <option value="no">NO</option>
+    </select>
+    <div><label class="error" id="extra-err"></label></div>
 
       <div><label>password:</label></div>
       <div><input type="password" name="password"></div>
